@@ -1,0 +1,21 @@
+{
+  "name": "downloads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "webpack --config webpack.config.js & node --experimental-sea-config sea-config.json"
+  },
+  "dependencies": {
+    "exifreader": "^4.54.0",
+    "uuid": "^14.0.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.112.2",
+    "webpack-cli": "^7.3.1"
+  }
+}
