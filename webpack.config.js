@@ -7,7 +7,7 @@ const module = {
         filename: "bundle.js",
         path: path.resolve(import.meta.dirname, "dist"),
     },
-    mode: "development",
+    mode: "production",
 }
 
 export default module;

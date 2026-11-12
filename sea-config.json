@@ -1,4 +1,4 @@
 {
     "main": "dist/bundle.js",
-    "output": "./out/program.exe"
+    "output": "./out/main.blob"
 }
