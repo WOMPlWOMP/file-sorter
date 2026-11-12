@@ -42,7 +42,10 @@ async function mapping(old_path, file){
             const date = tags["DateTimeOriginal"].value[0] ?? null;
 
             if(date) save(uuid, current_path, date, file_type);
+            return;
         }
+
+        save(uuid, current_path, null, file_type);
     }
     else {
         const dir_files = fs.readdirSync(current_path);
@@ -54,8 +57,7 @@ async function mapping(old_path, file){
 }
 
 function save(uuid, copy_path, date, file_type){
-    const year = getYear(date);
-    const folder_name = year + ". year";
+    const folder_name = date ? getYear(date) + ". year" : "unkown";
     const folder_path = path.join(new_path, folder_name);
 
     if(!fs.existsSync(folder_path)){
